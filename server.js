@@ -52,15 +52,26 @@ const RESTAURANT = {
 
 
 app.get('/', (req, res) => {
-  res.render('./home.ejs', {
+  res.render('home.ejs', {
     RESTAURANT
   })
 })
 
-app.get('/', (req, res) => {
-  res.render('./menu.ejs', {
-
+app.get('/menu', (req, res) => {
+  res.render('menu.ejs', {
+    menu: RESTAURANT.menu
   })
+})
+
+app.get('/menu/:category', (req, res) => {
+  const menuBits = RESTAURANT.menu.filter((food) => {
+    return food.category === req.params.category
+  })
+  res.render('category.ejs',{
+    menu: menuBits
+    
+  
+})
 })
 
 

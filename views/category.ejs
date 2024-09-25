@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<%- include('./partials/nav') %>
+
+<body>
+    <% menu.forEach((item,idx) => { %>
+        <%if(item.category === 'mains') {%>
+        <h3><%= item.name %></h3>
+        <p><%= item.details %></p>
+        <p><strong>£<%= item.price %></strong></p>
+        <p>Rating Scale: <%= item.rating %>/5</p>
+        <% }}) %></body>
+    <% menu.forEach((item,idx) => { %>
+        <%if(item.category === 'desserts') {%>
+        <h3><%= item.name %></h3>
+        <p><%= item.details %></p>
+        <p><strong>£<%= item.price %></strong></p>
+        <p>Rating Scale: <%= item.rating %>/5</p>
+        <% }}) %></body>
+    <% menu.forEach((item,idx) => { %>
+        <%if(item.category === 'sides') {%>
+        <h3><%= item.name %></h3>
+        <p><%= item.details %></p>
+        <p><strong>£<%= item.price %></strong></p>
+        <p>Rating Scale: <%= item.rating %>/5</p>
+        <% }}) %></body>
+</html>
