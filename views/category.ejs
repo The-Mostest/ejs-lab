@@ -14,19 +14,21 @@
         <p><%= item.details %></p>
         <p><strong>£<%= item.price %></strong></p>
         <p>Rating Scale: <%= item.rating %>/5</p>
-        <% }}) %></body>
-    <% menu.forEach((item,idx) => { %>
-        <%if(item.category === 'desserts') {%>
+
+        <%}else if(item.category === 'desserts') {%>
         <h3><%= item.name %></h3>
         <p><%= item.details %></p>
         <p><strong>£<%= item.price %></strong></p>
         <p>Rating Scale: <%= item.rating %>/5</p>
-        <% }}) %></body>
-    <% menu.forEach((item,idx) => { %>
-        <%if(item.category === 'sides') {%>
+
+   
+        <%} else if(item.category === 'sides') {%>
         <h3><%= item.name %></h3>
         <p><%= item.details %></p>
         <p><strong>£<%= item.price %></strong></p>
         <p>Rating Scale: <%= item.rating %>/5</p>
-        <% }}) %></body>
+        <% }}) %>
+
+
+
 </html>
